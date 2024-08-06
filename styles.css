@@ -1,0 +1,327 @@
+/* 
+KATU BLOCO COLORS
+green = rgb(54,98,68)
+dark green = rgb(40,62,50)
+light green = rgb(111,149,93)
+yellow = rgb(219,180,83)	 
+red = rgb(207,88,81)	
+dark red = rgb(149,83,78)
+black = rgb(0,1,5,)
+
+STRIP
+white = rgb(241,239,232)
+green = rgb(45,157,102)
+black = rgb(15,16,16)
+red = rgb(206,89,81)
+yellow = rgb(232,180,77)
+
+*/
+/* Reset */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Animations */
+
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes moveStripes {
+  0% {
+    background-position: 0 0;
+    height: 5rem;
+  }
+  100% {
+    background-position: 100% 0;
+    height: 1.37rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes expand {
+  from {
+      height: 0;
+  }
+  to {
+      height: 11.3rem;
+  }
+}
+
+@keyframes contract {
+  from {
+      height: 0;
+  }
+  to {
+      height: 7rem;
+  }
+}
+
+@keyframes scaleUpRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes backgroundTransition {
+  0% {
+    background: url('/src/strip.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  100% {
+    background: rgb(0,1,5);
+  }
+}
+
+main {
+  padding: 2em;
+  background: url('/src/strip.jpeg') no-repeat center center;
+  background-size: cover;
+  animation: backgroundTransition 14s forwards;
+}
+
+
+main {
+  padding: 2em;
+  background-color: rgb(0,1,5);
+  transition: background-color 1s;
+}
+
+.main-background-transition {
+  animation: backgroundTransition 4s forwards;
+}
+
+
+/* Global */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgb(0,1,5);
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header {
+  background-color: white;
+}
+
+header .logo-container {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  animation: expand 4s ease-in-out;
+}
+
+main {
+  padding: 2em;
+  transition: background-color 0.5s;
+}
+
+section {
+  margin: 2em 0;
+  padding: .5em;
+  border-radius: 8px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#presentation {
+  margin-top: -2rem;
+  margin-bottom: -.1rem;
+  background-color: black;
+  font-size: 1.6rem;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#presentation h1,
+#presentation p {
+  color: rgb(219,180,83);
+}
+
+#catalog {
+  background-color: rgb(111,149,93);
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+#catalog h1 {
+  text-align: center;
+  color: rgb(0,1,5);
+}
+
+.pack {
+  background-color: rgb(54,98,68);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.pack:hover {
+  background-color: rgb(74, 117, 93);
+  transform: translateY(-5px);
+}
+
+#catalog h2:hover {
+  text-align: center;
+}
+
+.pack h2 {
+  margin-top: 0;
+  color: rgb(219,180,83);
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons {
+  height: 2.7rem;
+  width: 2.7rem;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.small-icon {
+  opacity: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.option-menu-container {
+  display: flex;
+  justify-content: center;
+  gap: .3rem;
+}
+
+.pack-details {
+  color: rgb(15,16,16);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pack.show .pack-details {
+  display: block;
+}
+
+.pack-content {
+  font-size: 1.1rem;
+  display: none;
+  color: rgb(0,1,5);
+  background-color: rgba(207, 87, 81, 0.697);
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.pack.show .pack-content {
+  display: block;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contract-btn {
+  background-color: rgb(130,236,124);
+  color: black;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.contract-btn:hover {
+  background-color: rgb(207,88,81);
+}
+
+#terms {
+  background-color: rgb(207,88,81);
+  color: rgb(0,1,5);
+}
+
+/* Striped divider */
+.striped-divider {
+  width: 100%;
+  height: 22px;
+  background: linear-gradient(90deg,
+    rgb(15,16,16) 0%, rgb(15,16,16) 2px,
+    rgb(45,157,102) 4px, rgb(45,157,102) 8px,
+    rgb(15,16,16) 8px, rgb(15,16,16) 12px,
+    rgb(232,180,77) 12px, rgb(232,180,77) 14px,
+    rgb(15,16,16) 16px, rgb(15,16,16) 20px,
+    rgb(206,89,81) 20px, rgb(206,89,81) 24px,
+    rgb(15,16,16) 24px, rgb(15,16,16) 28px,
+    rgb(241,239,232) 28px, rgb(241,239,232) 32px);
+  background-size: 31px 100%;
+  animation: moveStripes 4s ease-in-out;
+}
+
+.top-divider {
+    animation-direction: normal;
+}
+  
+.bottom-divider {
+    animation-direction: normal;
+}
+
+/* Fade-in animation for paragraphs */
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.scale-up-rotate {
+  animation: scaleUpRotate 1s forwards;
+}
+
+.whatsapp {
+  height: 5rem;
+  width: 5rem;
+}
