@@ -101,7 +101,7 @@ li {
 }
 @keyframes backgroundTransition {
   0% {
-    background: url('./src/strip.jpeg') no-repeat center center;
+    background: url('/src/strip.jpeg') no-repeat center center;
     background-size: cover;
   }
   100% {
@@ -111,7 +111,7 @@ li {
 
 main {
   padding: 2em;
-  background: url('./src/strip.jpeg') no-repeat center center;
+  background: url('/src/strip.jpeg') no-repeat center center;
   background-size: cover;
   animation: backgroundTransition 14s forwards;
 }
