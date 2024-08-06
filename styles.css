@@ -101,15 +101,7 @@ li {
 }
 @keyframes backgroundTransition {
   0% {
-    background: linear-gradient(90deg,
-    rgb(15,16,16) 0%, rgb(15,16,16) 2px,
-    rgb(45,157,102) 4px, rgb(45,157,102) 8px,
-    rgb(15,16,16) 8px, rgb(15,16,16) 12px,
-    rgb(232,180,77) 12px, rgb(232,180,77) 14px,
-    rgb(15,16,16) 16px, rgb(15,16,16) 20px,
-    rgb(206,89,81) 20px, rgb(206,89,81) 24px,
-    rgb(15,16,16) 24px, rgb(15,16,16) 28px,
-    rgb(241,239,232) 28px, rgb(241,239,232) 32px);
+    background: url('/src/strip.jpeg') no-repeat center center;
     background-size: cover;
   }
   100% {
@@ -119,15 +111,7 @@ li {
 
 main {
   padding: 2em;
-  background: linear-gradient(90deg,
-    rgb(15,16,16) 0%, rgb(15,16,16) 2px,
-    rgb(45,157,102) 4px, rgb(45,157,102) 8px,
-    rgb(15,16,16) 8px, rgb(15,16,16) 12px,
-    rgb(232,180,77) 12px, rgb(232,180,77) 14px,
-    rgb(15,16,16) 16px, rgb(15,16,16) 20px,
-    rgb(206,89,81) 20px, rgb(206,89,81) 24px,
-    rgb(15,16,16) 24px, rgb(15,16,16) 28px,
-    rgb(241,239,232) 28px, rgb(241,239,232) 32px);
+  background: url('/src/strip.jpeg') no-repeat center center;
   background-size: cover;
   animation: backgroundTransition 14s forwards;
 }
